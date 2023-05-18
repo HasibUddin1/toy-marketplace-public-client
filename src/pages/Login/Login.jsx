@@ -1,7 +1,22 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
+
+    const { googleSignIn } = useContext(AuthContext)
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+        .then(result => {
+            const loggedUser = result.user
+            console.log(loggedUser)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
 
     const handleLogin = event => {
         event.preventDefault()
@@ -41,6 +56,12 @@ const Login = () => {
                                     <input className="btn btn-primary" type="submit" value="Login" />
                                 </div>
                             </form>
+                            <div className="divider">OR</div>
+                            <div className="text-center">
+                                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline">
+                                    G
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
