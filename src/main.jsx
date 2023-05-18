@@ -52,7 +52,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'toyDetails/:id',
-        element: <SingleToyDetails></SingleToyDetails>
+        element: <SingleToyDetails></SingleToyDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
       }
     ]
   }
