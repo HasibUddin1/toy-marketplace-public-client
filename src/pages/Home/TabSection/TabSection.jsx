@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import SportsCarCategory from "../SportsCarCategory/SportsCarCategory";
+import TrucksCarCategory from "../TrucksCarCategory/TrucksCarCategory";
+import RacingCarsCategory from "../RacingCarsCategory/RacingCarsCategory";
 
 
 const TabSection = () => {
@@ -29,13 +32,13 @@ const TabSection = () => {
                 </TabList>
 
                 <TabPanel>
-                    <h2 className="text-center text-4xl">Any content 1</h2>
+                    <SportsCarCategory></SportsCarCategory>
                 </TabPanel>
                 <TabPanel>
-                    <h2 className="text-center text-4xl">Any content 2</h2>
+                    <TrucksCarCategory></TrucksCarCategory>
                 </TabPanel>
                 <TabPanel>
-                    <h2 className="text-center text-4xl">Any content 3</h2>
+                    <RacingCarsCategory></RacingCarsCategory>
                 </TabPanel>
             </Tabs>
         </div>
