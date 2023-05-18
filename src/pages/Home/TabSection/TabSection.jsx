@@ -7,7 +7,7 @@ import RacingCarsCategory from "../RacingCarsCategory/RacingCarsCategory";
 
 const TabSection = () => {
 
-    const [activeTab, setActiveTab] = useState('')
+    const [activeTab, setActiveTab] = useState('Title 1')
 
     return (
         <div className="w-9/12 mx-auto mt-10">
