@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Truck from "./Truck";
 
 
 const TrucksCarCategory = () => {
@@ -12,8 +13,15 @@ const TrucksCarCategory = () => {
     }, [])
 
     return (
-        <div>
-            <h1 className="text-5xl text-center">{trucks.length}</h1>
+        <div className="mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+                {
+                    trucks.map(truck => <Truck
+                        key={truck._id}
+                        truck={truck}
+                    ></Truck>)
+                }
+            </div>
         </div>
     );
 };

@@ -15,20 +15,20 @@ const TabSection = () => {
             <Tabs>
                 <TabList className="flex justify-between text-4xl font-bold">
                     <Tab onClick={() => setActiveTab('Title 1')} className={
-                        activeTab == 'Title 1' ?
+                        activeTab === 'Title 1' ?
                         'cursor-pointer border-b-4 border-r-4 border-amber-300 w-1/3 px-5 text-center bg-amber-300' :
                         'cursor-pointer border-b-4 border-r-4 border-amber-300 w-1/3 px-5 text-center'
-                    }>Title 1</Tab>
+                    }>Sports Cars Toys</Tab>
                     <Tab onClick={() => setActiveTab('Title 2')} className={
-                        activeTab == 'Title 2' ?
+                        activeTab === 'Title 2' ?
                         'cursor-pointer border-b-4 border-r-4 border-amber-300 w-1/3 px-5 text-center bg-amber-300' :
                         'cursor-pointer border-b-4 border-r-4 border-amber-300 w-1/3 px-5 text-center'
-                    }>Title 2</Tab>
+                    }>Trucks Toys</Tab>
                     <Tab onClick={() => setActiveTab('Title 3')} className={
-                        activeTab == 'Title 3' ?
+                        activeTab === 'Title 3' ?
                         'cursor-pointer w-1/3 px-5 border-b-4 border-amber-300 text-center bg-amber-300' :
                         'cursor-pointer w-1/3 px-5 border-b-4 border-amber-300 text-center'
-                    }>Title 3</Tab>
+                    }>Racing Cars Toys</Tab>
                 </TabList>
 
                 <TabPanel>
