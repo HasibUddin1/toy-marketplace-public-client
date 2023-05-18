@@ -15,6 +15,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import AuthProvider from './providers/AuthProvider';
 import SingleToyDetails from './pages/SingleToyDetails/SingleToyDetails';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'toyDetails/:id',
-        element: <SingleToyDetails></SingleToyDetails>,
+        element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/toyCars/${params.id}`)
       }
     ]
