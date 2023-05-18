@@ -14,6 +14,7 @@ import Blogs from './pages/Blogs/Blogs';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import AuthProvider from './providers/AuthProvider';
+import SingleToyDetails from './pages/SingleToyDetails/SingleToyDetails';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      },
+      {
+        path: 'toyDetails/:id',
+        element: <SingleToyDetails></SingleToyDetails>
       }
     ]
   }

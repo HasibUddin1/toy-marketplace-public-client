@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 
 
 const SportsCar = ({ sportsCar }) => {
     // console.log(sportsCar)
-    const { name, picture, price, rating } = sportsCar
+    const { _id,name, picture, price, rating } = sportsCar
     return (
         <div className="mx-auto">
             <div className="card w-96 bg-base-100 shadow-xl image-full">
@@ -12,7 +13,7 @@ const SportsCar = ({ sportsCar }) => {
                     <p>Price: ${price}</p>
                     <p>Rating: {rating}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">View Details</button>
+                        <Link to={`/toyDetails/${_id}`}><button className="btn btn-primary">View Details</button></Link>
                     </div>
                 </div>
             </div>
