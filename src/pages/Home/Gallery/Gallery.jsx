@@ -36,7 +36,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 <div className="relative">
-                    <img className="h-[500px] w-[500px] rounded-xl" src="https://images.unsplash.com/photo-1508896694512-1eade558679c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
+                    <img className="h-[500px] w-[500px] rounded-xl" src="https://images.unsplash.com/photo-1587292818536-5a404595dd36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1646&q=80" alt="" />
                     <div className="absolute bottom-0 font-bold text-2xl p-5 bg-gradient-to-b from-[#151515] to-[rgba(21, 21, 21, 0)] h-full w-full rounded-xl">
                         <h1 className="text-white">Magical Unicorn Carriage</h1>
                     </div>
