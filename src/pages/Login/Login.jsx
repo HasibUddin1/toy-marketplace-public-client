@@ -5,17 +5,17 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
 
-    const { googleSignIn } = useContext(AuthContext)
+    const { googleSignIn, handleSignIn } = useContext(AuthContext)
 
     const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(result => {
-            const loggedUser = result.user
-            console.log(loggedUser)
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     const handleLogin = event => {
@@ -24,7 +24,15 @@ const Login = () => {
         const form = event.target
         const email = form.email.value
         const password = form.password.value
-        console.log(email, password)
+
+        handleSignIn(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
