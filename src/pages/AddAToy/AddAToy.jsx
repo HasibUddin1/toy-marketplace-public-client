@@ -1,6 +1,53 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const AddAToy = () => {
+
+    const {user} = useContext(AuthContext)
+    // console.log(user)
+
+    const handleSubmit = event => {
+        event.preventDefault()
+
+        const form = event.target
+        const picture = form.picture.value
+        const toyName = form.name.value
+        const sellerName = form.sellerName.value
+        const sellerEmail = form.sellerEmail.value
+        const category = form.subCategory.value
+        const price = form.price.value
+        const rating = form.rating.value
+        const quantity = form.quantity.value
+        const description = form.description.value
+
+        const toyInfo ={
+            picture,
+            toyName,
+            sellerName,
+            sellerEmail,
+            category,
+            price,
+            rating,
+            quantity,
+            description
+        }
+
+        console.log(toyInfo)
+
+        fetch('http://localhost:5000/toyCars', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(toyInfo)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
+
     return (
         <div>
             <div className="w-9/12 mx-auto mt-20">
@@ -10,19 +57,19 @@ const AddAToy = () => {
                     </div>
                     <div className="card w-full shadow-2xl">
                         <div className="card-body">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="flex gap-10">
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Picture</span>
                                         </label>
-                                        <input type="text" name="picture" placeholder="Picture" className="input input-bordered" />
+                                        <input type="text" name="picture" placeholder="Picture" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Toy Name</span>
                                         </label>
-                                        <input type="text" name="name" placeholder="Toy Name" className="input input-bordered" />
+                                        <input type="text" name="name" placeholder="Toy Name" className="input input-bordered" required />
                                     </div>
                                 </div>
                                 <div className="flex gap-10">
@@ -30,13 +77,13 @@ const AddAToy = () => {
                                         <label className="label">
                                             <span className="label-text">Seller Name</span>
                                         </label>
-                                        <input type="text" name="sellerName" placeholder="Seller Name" className="input input-bordered" />
+                                        <input type="text" defaultValue={user.displayName} name="sellerName" placeholder="Seller Name" className="input input-bordered" readOnly required />
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Seller Email</span>
                                         </label>
-                                        <input type="text" name="sellerEmail" placeholder="Seller Email" className="input input-bordered" />
+                                        <input type="text" defaultValue={user.email} name="sellerEmail" placeholder="Seller Email" className="input input-bordered" readOnly required />
                                     </div>
                                 </div>
                                 <div className="flex gap-10">
@@ -44,13 +91,13 @@ const AddAToy = () => {
                                         <label className="label">
                                             <span className="label-text">Sub-Category</span>
                                         </label>
-                                        <input type="text" name="subCategory" placeholder="Sub-Category" className="input input-bordered" />
+                                        <input type="text" name="subCategory" placeholder="Sub-Category" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Price</span>
                                         </label>
-                                        <input type="text" name="price" placeholder="Price" className="input input-bordered" />
+                                        <input type="text" name="price" placeholder="Price" className="input input-bordered" required />
                                     </div>
                                 </div>
                                 <div className="flex gap-10">
@@ -58,13 +105,13 @@ const AddAToy = () => {
                                         <label className="label">
                                             <span className="label-text">Rating</span>
                                         </label>
-                                        <input type="text" name="rating" placeholder="Rating" className="input input-bordered" />
+                                        <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control w-1/2">
                                         <label className="label">
                                             <span className="label-text">Available Quantity</span>
                                         </label>
-                                        <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered" />
+                                        <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered" required />
                                     </div>
                                 </div>
                                 <div className="form-control">
@@ -74,7 +121,7 @@ const AddAToy = () => {
                                     <input type="text" name="description" placeholder="Description" className="input input-bordered" />
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className="btn btn-primary" type="submit" value="Register" />
+                                    <input className="btn btn-primary" type="submit" value="Add Your Toy" />
                                 </div>
                             </form>
                         </div>
