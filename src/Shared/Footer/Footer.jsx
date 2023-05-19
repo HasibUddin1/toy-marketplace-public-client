@@ -2,9 +2,34 @@
 
 const Footer = () => {
     return (
-        <div>
-            <h1 className="text-4xl">This is Footer</h1>
-        </div>
+        <footer className="footer p-10 bg-amber-100 text-base-content h-[200px] footer-container mt-20">
+            <div>
+                <div className="w-1/2 mx-auto">
+                    <img className="h-[70px] w-[70px] rounded-full" src="https://i.ibb.co/hdkf5Q7/logo.jpg" alt="" />
+                </div>
+                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+            </div>
+            <div>
+                <span className="footer-title">Services</span>
+                <a className="link link-hover">Branding</a>
+                <a className="link link-hover">Design</a>
+                <a className="link link-hover">Marketing</a>
+                <a className="link link-hover">Advertisement</a>
+            </div>
+            <div>
+                <span className="footer-title">Shops</span>
+                <a className="link link-hover">About us</a>
+                <a className="link link-hover">Contact</a>
+                <a className="link link-hover">Toys</a>
+                <a className="link link-hover">Press kit</a>
+            </div>
+            <div>
+                <span className="footer-title">Legal</span>
+                <a className="link link-hover">Terms of use</a>
+                <a className="link link-hover">Privacy policy</a>
+                <a className="link link-hover">Cookie policy</a>
+            </div>
+        </footer>
     );
 };
 
