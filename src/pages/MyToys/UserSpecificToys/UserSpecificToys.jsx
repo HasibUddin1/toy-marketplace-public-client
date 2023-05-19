@@ -23,7 +23,7 @@ const UserSpecificToys = ({ toy, toys, setToys }) => {
                 //     'success'
                 //   )
 
-                fetch(`http://localhost:5000/toyCars/${_id}`, {
+                fetch(`https://assignment-11-server-side-mu.vercel.app/toyCars/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

@@ -36,7 +36,7 @@ const AddAToy = () => {
 
         console.log(toyInfo)
 
-        fetch('http://localhost:5000/toyCars', {
+        fetch('https://assignment-11-server-side-mu.vercel.app/toyCars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

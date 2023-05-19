@@ -10,14 +10,14 @@ const MyToys = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://assignment-11-server-side-mu.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user])
 
     // console.log(user?.email)
     const handleSortingAscending = () => {
-        fetch(`http://localhost:5000/myToysByPricesAscending/${user?.email}`)
+        fetch(`https://assignment-11-server-side-mu.vercel.app/myToysByPricesAscending/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -26,7 +26,7 @@ const MyToys = () => {
     }
 
     const handleSortingDescending = () => {
-        fetch(`http://localhost:5000/myToysByPricesDescending/${user?.email}`)
+        fetch(`https://assignment-11-server-side-mu.vercel.app/myToysByPricesDescending/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)

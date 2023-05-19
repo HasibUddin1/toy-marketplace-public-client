@@ -40,7 +40,7 @@ const UpdateAToy = () => {
 
         console.log(updatedToyInfo)
 
-        fetch(`http://localhost:5000/updateAToy/${_id}`, {
+        fetch(`https://assignment-11-server-side-mu.vercel.app/updateAToy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

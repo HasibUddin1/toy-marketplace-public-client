@@ -13,7 +13,7 @@ const AllToys = () => {
     // console.log(searchText)
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/getToysByText/${searchText}`)
+        fetch(`https://assignment-11-server-side-mu.vercel.app/getToysByText/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)

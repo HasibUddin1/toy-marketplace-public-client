@@ -7,7 +7,7 @@ const SportsCarCategory = () => {
     const [sportsCars, setSportsCars] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/sportsCar')
+        fetch('https://assignment-11-server-side-mu.vercel.app/sportsCar')
         .then(res => res.json())
         .then(data => setSportsCars(data))
     }, [])
