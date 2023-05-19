@@ -14,7 +14,7 @@ const SportsCarCategory = () => {
 
     return (
         <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {
                     sportsCars.map(sportsCar => <SportsCar
                         key={sportsCar._id}

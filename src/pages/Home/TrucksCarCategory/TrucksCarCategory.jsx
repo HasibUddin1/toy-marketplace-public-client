@@ -14,7 +14,7 @@ const TrucksCarCategory = () => {
 
     return (
         <div className="mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {
                     trucks.map(truck => <Truck
                         key={truck._id}
