@@ -16,7 +16,7 @@ const SingleToyDetails = () => {
                     <h4 className="text-2xl font-semibold">Seller Name: {sellerName}</h4>
                     <h4 className="text-2xl font-semibold">Seller Email: {sellerEmail}</h4>
                 </div>
-                <p className="text-xl font-semibold">Price: {price}</p>
+                <p className="text-xl font-semibold">Price: ${price}</p>
                 <div className="flex gap-5">
                     <p className="text-xl font-semibold">Rating: {rating}</p>
                     <p className="text-xl font-semibold">Available Quantity: {quantity}</p>
