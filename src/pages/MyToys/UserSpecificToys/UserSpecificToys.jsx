@@ -59,7 +59,7 @@ const UserSpecificToys = ({ toy, toys, setToys }) => {
             <td>{price}</td>
             <td>{quantity}</td>
             <th>
-                <Link><button className="btn btn-ghost btn-xs">Update</button></Link>
+                <Link to={`/updateToyInfo/${_id}`}><button className="btn btn-ghost btn-xs">Update</button></Link>
             </th>
             <th>
                 <Link><button onClick={handleDelete} className="btn btn-ghost btn-xs">Delete</button></Link>
