@@ -9,7 +9,7 @@ const SingleToyDetails = () => {
 
     return (
         <div className="flex items-center bg-amber-100 px-20 py-10 gap-10">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 w-1/2">
                 <h2 className="text-4xl font-bold">{name}</h2>
                 <p className="text-xl">{description}</p>
                 <div>
@@ -22,7 +22,7 @@ const SingleToyDetails = () => {
                     <p className="text-xl font-semibold">Available Quantity: {quantity}</p>
                 </div>
             </div>
-            <div>
+            <div className="w-1/2">
                 <img className="rounded-3xl" src={picture} alt="" />
             </div>
         </div>
