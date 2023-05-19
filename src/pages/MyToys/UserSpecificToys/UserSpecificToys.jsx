@@ -56,7 +56,7 @@ const UserSpecificToys = ({ toy, toys, setToys }) => {
                 {name}
             </td>
             <td>{category}</td>
-            <td>{price}</td>
+            <td>${price}</td>
             <td>{quantity}</td>
             <th>
                 <Link to={`/updateToyInfo/${_id}`}><button className="btn btn-ghost btn-xs">Update</button></Link>

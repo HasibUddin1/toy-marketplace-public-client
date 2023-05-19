@@ -20,7 +20,7 @@ const SingleToy = ({toy}) => {
                 {name}
             </td>
             <td>{category}</td>
-            <td>{price}</td>
+            <td>${price}</td>
             <td>{quantity}</td>
             <th>
                 <Link to={`/toyDetails/${_id}`}><button className="btn btn-ghost btn-xs">View Details</button></Link>

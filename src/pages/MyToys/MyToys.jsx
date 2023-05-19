@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import UserSpecificToys from "./UserSpecificToys/UserSpecificToys";
+import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
 
 const MyToys = () => {
@@ -15,6 +16,23 @@ const MyToys = () => {
     }, [user])
 
     // console.log(user?.email)
+    const handleSortingAscending = () => {
+        fetch(`http://localhost:5000/myToysByPricesAscending/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                setToys(data)
+            })
+    }
+
+    const handleSortingDescending = () => {
+        fetch(`http://localhost:5000/myToysByPricesDescending/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                setToys(data)
+            })
+    }
 
     return (
         <div>
@@ -44,6 +62,10 @@ const MyToys = () => {
                         }
                     </tbody>
                 </table>
+            </div>
+            <div className="flex justify-center gap-5">
+                <button className="flex items-center gap-2 bg-gray-500 text-white font-bold px-6 py-2 rounded-xl hover:bg-gray-700 ease-in-out duration-200" onClick={handleSortingAscending}>Sort By Prices <FaArrowUp></FaArrowUp></button>
+                <button className="flex items-center gap-2 bg-gray-500 text-white font-bold px-6 py-2 rounded-xl hover:bg-gray-700 ease-in-out duration-200" onClick={handleSortingDescending}>Sort By Prices <FaArrowDown></FaArrowDown></button>
             </div>
         </div>
     );
