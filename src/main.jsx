@@ -17,11 +17,13 @@ import AuthProvider from './providers/AuthProvider';
 import SingleToyDetails from './pages/SingleToyDetails/SingleToyDetails';
 import PrivateRoute from './Routes/PrivateRoute';
 import UpdateAToy from './pages/MyToys/UserSpecificToys/UpdateAToy/UpdateAToy';
+import ErrorPage from './Shared/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'myToys',
-        element: <MyToys></MyToys>
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
       {
         path: 'addAToy',
