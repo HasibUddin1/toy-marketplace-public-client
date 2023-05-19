@@ -14,7 +14,7 @@ const MyToys = () => {
             .then(data => setToys(data))
     }, [user])
 
-    console.log(user?.email)
+    // console.log(user?.email)
 
     return (
         <div>
