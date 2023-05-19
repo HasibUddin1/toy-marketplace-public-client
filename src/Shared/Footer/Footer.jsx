@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="w-1/2 mx-auto">
                     <img className="h-[70px] w-[70px] rounded-full" src="https://i.ibb.co/hdkf5Q7/logo.jpg" alt="" />
                 </div>
-                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p>Toy Cars Ltd.<br />Providing reliable toys since 1992</p>
             </div>
             <div>
                 <span className="footer-title">Services</span>
