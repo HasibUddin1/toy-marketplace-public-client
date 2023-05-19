@@ -2,9 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import UserSpecificToys from "./UserSpecificToys/UserSpecificToys";
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+import useTitle from "../../hooks/useTitle";
 
 
 const MyToys = () => {
+
+    useTitle('My Toys')
+
     const { user } = useContext(AuthContext)
 
     const [toys, setToys] = useState([])

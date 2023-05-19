@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 
 const Login = () => {
+
+    useTitle('Login')
 
     const { googleSignIn, handleSignIn } = useContext(AuthContext)
 
@@ -55,13 +58,13 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="text" name="email" placeholder="email" className="input input-bordered" />
+                                    <input type="text" name="email" placeholder="email" className="input input-bordered" required/>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" name="password" placeholder="password" className="input input-bordered" />
+                                    <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
                                     <label className="label">
                                         <Link to='/register' className="label-text-alt link link-hover">New to this site?</Link>
                                     </label>

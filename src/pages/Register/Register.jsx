@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 
 const Register = () => {
+
+    useTitle('Register')
 
     const { createUser, updateUsersProfile } = useContext(AuthContext)
 
@@ -49,19 +52,19 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+                                    <input type="text" name="name" placeholder="Name" className="input input-bordered" required/>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="text" name="email" placeholder="Email" className="input input-bordered" />
+                                    <input type="text" name="email" placeholder="Email" className="input input-bordered" required/>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="text" name="password" placeholder="Password" className="input input-bordered" />
+                                    <input type="password" name="password" placeholder="Password" className="input input-bordered" required/>
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
