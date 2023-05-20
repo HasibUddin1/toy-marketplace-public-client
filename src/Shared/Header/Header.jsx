@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Header = () => {
@@ -10,7 +11,12 @@ const Header = () => {
     const handleLogOut = () => {
         logOut()
         .then(() => {
-            alert('User has been successfully logged out')
+            Swal.fire({
+                title: 'Success!',
+                text: 'User has been successfully logged out',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
         })
         .catch(error => {
             console.log(error)

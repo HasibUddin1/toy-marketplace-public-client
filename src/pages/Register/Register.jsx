@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import useTitle from "../../hooks/useTitle";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -24,7 +25,13 @@ const Register = () => {
         createUser(email, password)
         .then(result => {
             const registeredUser = result.user
-            console.log(registeredUser)
+            // console.log(registeredUser)
+            Swal.fire({
+                title: 'Success!',
+                text: 'User has been successfully created',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
             updateUsersProfile(registeredUser,name, photo)
             .then(() => {
                 alert('Users profile has been successfully updated')
