@@ -19,8 +19,8 @@ const Header = () => {
 
     return (
         <div className="bg-amber-500">
-            <div className="flex justify-between items-center px-20 py-5">
-                <div className="flex gap-5 items-center">
+            <div className="md:flex justify-between items-center px-5 md:px-20 py-5">
+                <div className="flex gap-5 items-center mb-5">
                     <img className="h-[50px] w-[50px] rounded-full" src="https://i.ibb.co/hdkf5Q7/logo.jpg" alt="" />
                     <h2 className="text-5xl font-bold">Toy Cars</h2>
                 </div>
