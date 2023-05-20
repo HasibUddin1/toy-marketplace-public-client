@@ -6,7 +6,7 @@ import { FaRegStar, FaStar } from 'react-icons/fa';
 const SingleToyDetails = () => {
 
     const toy = useLoaderData()
-    console.log(toy)
+    // console.log(toy)
     const { picture, name, sellerName, sellerEmail, price, rating, quantity, description } = toy
 
     return (

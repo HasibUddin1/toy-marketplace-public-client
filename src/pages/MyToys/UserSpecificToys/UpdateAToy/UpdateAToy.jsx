@@ -41,7 +41,7 @@ const UpdateAToy = () => {
             description
         }
 
-        console.log(updatedToyInfo)
+        // console.log(updatedToyInfo)
 
         fetch(`https://assignment-11-server-side-mu.vercel.app/updateAToy/${_id}`, {
             method: 'PUT',

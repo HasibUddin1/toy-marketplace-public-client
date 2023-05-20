@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const Truck = ({truck}) => {
-    console.log(truck)
+    // console.log(truck)
     const { _id, name, picture, price, rating } = truck
     return (
         <div className="mx-auto">
