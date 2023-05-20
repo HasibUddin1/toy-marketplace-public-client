@@ -39,8 +39,8 @@ const Header = () => {
                     {
                         user ?
                             <>
-                                <div className="tooltip" data-tip={user.displayName}>
-                                    <img className="h-[30px] w-[30px] rounded-full" src={user.photoURL} alt="" />
+                                <div className="tooltip" data-tip={user?.displayName}>
+                                    <img className="h-[30px] w-[30px] rounded-full" src={user?.photoURL} alt="" />
                                 </div>
                                 <button onClick={handleLogOut} className="font-semibold text-xl hover:bg-gray-300 px-2 rounded-lg">Log Out</button>
                             </> :

@@ -1,4 +1,6 @@
+import Rating from "react-rating";
 import { useLoaderData } from "react-router-dom";
+import { FaRegStar, FaStar } from 'react-icons/fa';
 
 
 const SingleToyDetails = () => {
@@ -18,7 +20,13 @@ const SingleToyDetails = () => {
                 </div>
                 <p className="text-xl font-semibold">Price: ${price}</p>
                 <div className="flex gap-5">
-                    <p className="text-xl font-semibold">Rating: {rating}</p>
+                    <p className="text-xl font-semibold">Rating: <Rating
+                        placeholderRating={rating}
+                        emptySymbol={<FaRegStar></FaRegStar>}
+                        placeholderSymbol={<FaStar></FaStar>}
+                        fullSymbol={<FaStar></FaStar>}
+                        readonly
+                    /></p>
                     <p className="text-xl font-semibold">Available Quantity: {quantity}</p>
                 </div>
             </div>

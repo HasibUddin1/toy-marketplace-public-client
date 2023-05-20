@@ -2,8 +2,8 @@ import banner from '../../../assets/images/banner-image-2.png'
 
 const Banner = () => {
     return (
-        <div data-aos="fade-up" className='md:flex bg-amber-100 justify-between px-10 md:px-28 py-20'>
-            <div className='md:w-1/2 mb-5'>
+        <div className='md:flex bg-amber-100 justify-between px-10 md:px-28 py-20'>
+            <div data-aos="fade-up" className='md:w-1/2 mb-5'>
                 <h1 className='text-center text-5xl font-bold mb-10'>Best <span className='text-amber-500'>Toy Cars</span></h1>
                 <h4 className='text-3xl'>Welcome to our online toy car store, the ultimate destination for all your toy car enthusiasts! Our website is dedicated to providing an extensive collection of toy cars that will thrill children and adults alike</h4>
                 <div className='text-center mt-10'>
